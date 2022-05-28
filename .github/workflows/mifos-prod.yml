@@ -1,0 +1,46 @@
+# This is the GitHub Action which
+# automatically updates Credilinq's live Mifos instance
+
+name: Build and Deploy to Credilinq-Mifos live
+
+on:
+  push:
+    branches: [ ci/cd ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.13.1'
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
+    - name: Install dependencies
+      run: |
+        npm install -g bower
+        npm install -g grunt-cli
+        bower install
+        npm ci
+        gem install bundler
+        bundle install
+
+    - name: Build
+      run: grunt prod
+      env:
+        CI: false
+
+    - name: Deploy
+      uses: wangyucode/sftp-upload-action@v1.3.2
+      with:
+        host: ${{ secrets.SSH_AWS_SERVER_IP }}
+        username: ${{ secrets.SSH_SERVER_USER }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+        localDir: './dist/community-app/'
+        remoteDir: ${{ secrets.SSH_REMOTE_DIR }}
