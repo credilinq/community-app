@@ -29,3 +29,26 @@
 .btn-offset{
   margin-bottom: 5px;
 }
+
+.btn-primary {
+  background: #4d0066;
+  opacity: 0.9;
+  border: #45005b;
+}
+.btn-primary:hover {
+  background: #4d0066;
+  opacity: 1;
+  border: #45005b;
+}
+
+a {
+  color: #4d0066;
+}
+
+a:hover {
+  color: #45005b;
+}
+
+.black:hover {
+  background: #f15c4d !important;
+}
