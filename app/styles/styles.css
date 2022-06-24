@@ -8983,7 +8983,6 @@ input[type="submit"] {
 button[disabled],
 html input[disabled] {
   cursor: default;
-  opacity: 50%;
 }
 
 /* line 311, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss */
@@ -12294,9 +12293,6 @@ th {
   line-height: 1.42857;
   vertical-align: top;
   border-top: 1px solid #ddd;
-  /*Issue - #3002 */
-  word-break: break-all;
-  max-width: 100px;
 }
 /* line 41, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_tables.scss */
 .table > thead > tr > th {
@@ -20081,16 +20077,6 @@ button.close {
   content: "";
 }
 
-/* line 1, ../bower_components/angular-bootstrap/table.css */
-.table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.42857;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-  max-width: 150px          !important;
-  word-break: break-all     !important;
-}
-
 /* Load style components */
 /* @import this file */
 /* line 3, ../styles-dev/main/components/_alerts.scss */
@@ -20592,7 +20578,7 @@ span.required {
 /* line 413, ../styles-dev/main/components/_content.scss */
 .card .pointer-main:hover {
   cursor: pointer;
-  background-color: #4f99ed;
+  background-color: #4d0066;
   color: #fff;
 }
 /* line 419, ../styles-dev/main/components/_content.scss */
@@ -20846,6 +20832,35 @@ span.required {
   margin-bottom: 5px;
 }
 
+/* line 33, ../styles-dev/main/components/_buttons.scss */
+.btn-primary {
+  background: #4d0066;
+  opacity: 0.9;
+  border: #45005b;
+}
+
+/* line 38, ../styles-dev/main/components/_buttons.scss */
+.btn-primary:hover {
+  background: #4d0066;
+  opacity: 1;
+  border: #45005b;
+}
+
+/* line 44, ../styles-dev/main/components/_buttons.scss */
+a {
+  color: #4d0066;
+}
+
+/* line 48, ../styles-dev/main/components/_buttons.scss */
+a:hover {
+  color: #45005b;
+}
+
+/* line 52, ../styles-dev/main/components/_buttons.scss */
+.black:hover {
+  background: #f15c4d !important;
+}
+
 /* @import this file */
 @media screen and (max-width: 767px) {
   /* line 3, ../styles-dev/main/components/_layout.scss */
@@ -20856,7 +20871,7 @@ span.required {
 
 /* line 9, ../styles-dev/main/components/_layout.scss */
 .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .navbar-nav > li > a {
-  color: #4f99ed !important;
+  color: #4d0066 !important;
 }
 
 /* line 13, ../styles-dev/main/components/_layout.scss */
@@ -21199,6 +21214,16 @@ div.chosen-container.chosen-container-single {
   padding: 8px 5px;
 }
 
+/* line 76, ../styles-dev/main/components/_notifications.scss */
+.new-notification {
+  font-weight: bold;
+  border-left: #4d0066 solid 2px;
+}
+/* line 80, ../styles-dev/main/components/_notifications.scss */
+.new-notification h4 {
+  font-weight: bold;
+}
+
 /* line 1, ../styles-dev/main/components/_report.scss */
 .graybg {
   background-color: #f0f0f0;
@@ -21351,12 +21376,7 @@ div.chosen-container.chosen-container-single {
   padding-left: 30px;
 }
 
-.paddedleft52px {
-  padding-left: 52px; 
-}
-
 /* line 108, ../styles-dev/main/components/_report.scss */
-
 .paddedleft80 {
   padding-left: 8%;
 }
@@ -22401,10 +22421,3 @@ Interactive Layer
     transform: rotate(360deg);
   }
 }
-.strike-grey{
-  text-decoration: line-through;
-  color: rgb(202 140 45);
-}
-.amber{
-  color: rgb(202 140 45);
-} 

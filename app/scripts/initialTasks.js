@@ -1,7 +1,7 @@
 
 (function (mifosX) {
     var defineHeaders = function ($httpProvider, $translateProvider, ResourceFactoryProvider, HttpServiceProvider, $idleProvider, $keepaliveProvider, IDLE_DURATION, WARN_DURATION, KEEPALIVE_INTERVAL) {
-        var mainLink = getLocation(window.location.href);
+        var mainLink = getLocation("https://sandbox.fineract.credilinq.ai:8443");
         var baseApiUrl = "https://demo.mifos.io";
         var host = "";
         var portNumber = "";
