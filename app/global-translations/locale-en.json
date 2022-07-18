@@ -2932,6 +2932,7 @@
   "label.tooltip.global.change-emi-if-repaymentdate-same-as-disbursementdate": "Determines if Equated Monthly Installment (EMI) can be changed in loans where the repayment and disbursement dates are the same.",
   "label.tooltip.global.constraint_approach_for_datatables": "Determines whether the Code Value Name or the Code Value ID will be stored in the generated data table.",
   "label.tooltip.global.daily-tpt-limit": "Determines if there is a limit on the daily Third Party Transfer (TPT) amount. This is mainly used for a self service user.",
+  "label.tooltip.global.days-prior-to-loan-repayment-due-date": "Should always be enabled for scheduler job that sends client email notifications prior to loan repayment due date.",
   "label.tooltip.global.Enable-Address": "Determines if a client has to provide an additional address field during account creation.",
   "label.tooltip.global.financial-year-beginning-month": "This should be set at the database level before any savings interest is posted. Allowed values: 1 - 12 (January - December). Interest posting periods are evaluated based on this configuration.",
   "label.tooltip.global.force-password-reset-days": "Determines if passwords expire and whether or not users will be required to reset their passwords after a certain number of days.",
