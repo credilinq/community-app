@@ -139,6 +139,23 @@
 	            </div>
 	        </div>
 			<div class="form-group">
+	            <label class="control-label col-sm-2" for="email">{{'label.input.email' | translate}}</label>
+	
+	            <div class="col-sm-3">
+	                <input id="email" name="email" ng-model="formData.emailAddress" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" 
+					class="form-control" late-Validate />
+	            </div>
+				<div class="col-sm-2">
+					<span ng-show="editclientform.email.$invalid && editclientform.email.$dirty">
+						<!-- <form-validate valattributeform="createuserform" valattribute="email"/> -->
+						<small class="required" ng-show="editclientform.email.$error.pattern">
+							<!-- {{'label.emailinvalid' | translate}} -->
+							email invalid
+						</small>
+					</span>
+				</div>
+	        </div>
+			<div class="form-group">
 				<label class="control-label col-sm-2" ng-hide="showNonPersonOptions">{{'label.input.dateofbirth' | translate}}</label>
 				<label class="control-label col-sm-2" ng-show="showNonPersonOptions">{{'label.input.incorporationdate' | translate}}</label>
 			
