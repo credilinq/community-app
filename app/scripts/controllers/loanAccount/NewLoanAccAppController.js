@@ -73,7 +73,7 @@
                     scope.loandetails.interestValue = scope.loanaccountinfo.interestType.value;
                     scope.loandetails.amortizationValue = scope.loanaccountinfo.amortizationType.value;
                     scope.loandetails.interestCalculationPeriodValue = scope.loanaccountinfo.interestCalculationPeriodType.value;
-                    scope.loandetails.transactionProcessingStrategyValue = scope.formValue(scope.loanaccountinfo.transactionProcessingStrategyOptions,scope.formData.transactionProcessingStrategyId,'id','name');
+                    scope.loandetails.transactionProcessingStrategyValue = scope.formValue(scope.loanaccountinfo.transactionProcessingStrategyOptions,scope.formData.transactionProcessingStrategyCode,'code','name');
                     scope.datatables = data.datatables;
                     scope.handleDatatables(scope.datatables);
                     scope.disabled = false;
@@ -142,7 +142,7 @@
                     scope.formData.syncDisbursementWithMeeting = true;
                 }
                 scope.multiDisburseLoan = scope.loanaccountinfo.multiDisburseLoan;
-                scope.formData.productId = scope.loanaccountinfo.loanProductId;
+                scope.formData.productId = scope.loanaccountinfo.product.id;
                 scope.formData.fundId = scope.loanaccountinfo.fundId;
                 scope.formData.principal = scope.loanaccountinfo.principal;
                 scope.formData.loanTermFrequency = scope.loanaccountinfo.termFrequency;
@@ -166,8 +166,8 @@
                 scope.formData.graceOnPrincipalPayment = scope.loanaccountinfo.graceOnPrincipalPayment;
                 scope.formData.graceOnInterestPayment = scope.loanaccountinfo.graceOnInterestPayment;
                 scope.formData.graceOnArrearsAgeing = scope.loanaccountinfo.graceOnArrearsAgeing;
-                scope.formData.transactionProcessingStrategyId = scope.loanaccountinfo.transactionProcessingStrategyId;
-                scope.loandetails.transactionProcessingStrategyValue = scope.formValue(scope.loanaccountinfo.transactionProcessingStrategyOptions,scope.formData.transactionProcessingStrategyId,'id','name');
+                scope.formData.transactionProcessingStrategyCode = scope.loanaccountinfo.transactionProcessingStrategyCode;
+                scope.loandetails.transactionProcessingStrategyValue = scope.formValue(scope.loanaccountinfo.transactionProcessingStrategyOptions,scope.formData.transactionProcessingStrategyCode,'code','name');
                 scope.formData.graceOnInterestCharged = scope.loanaccountinfo.graceOnInterestCharged;
                 scope.formData.fixedEmiAmount = scope.loanaccountinfo.fixedEmiAmount;
                 scope.formData.maxOutstandingLoanBalance = scope.loanaccountinfo.maxOutstandingLoanBalance;
